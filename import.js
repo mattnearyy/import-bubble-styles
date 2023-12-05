@@ -8,7 +8,7 @@ myHeaders.append("content-type", "application/json");
 myHeaders.append("credentials", "same-origin");
 
 
-// function to make change to app
+// FUNCTION TO MAKE CHANGES TO THE APP
 function editorUpdate(changeBody, pathArray) {
     let body = {
       "v": 1,
@@ -44,7 +44,6 @@ let fontPathArray = ["settings", "client_safe", "font_tokens_user"];
 editorUpdate(fontTokensObj, fontPathArray)
 
 /* << CREATE COLOR VARIABLES FROM LOCAL STORAGE>> */
-
 let colorTokensObj = JSON.parse(localStorage.getItem("colorTokens"));
 let colorPathArray = ["settings", "client_safe", "color_tokens_user"];
 editorUpdate(colorTokensObj, colorPathArray)
@@ -57,7 +56,6 @@ styles.forEach((element) => appquery.delete_style(element.json.__name));
 console.log('All styles deleted');
 
 let retrievedStylesJSON = localStorage.getItem('myStyles');
-
 let stylesList = JSON.parse(retrievedStylesJSON);
 
 stylesList.forEach(styleObj => {
