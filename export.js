@@ -1,8 +1,6 @@
 /* << COPY COLOR VARIABLES TO LOCAL STORAGE>> */
-const colorTokens = Object.values(appquery().json._children.settings.cache.client_safe.color_tokens_user)[0];
-const fontTokens = Object.values(appquery().json._children.settings.cache.client_safe.font_tokens_user)[0];
-
-console.log(fontTokens)
+const colorTokens = Object.values(appquery().json._children.settings.cache.client_safe.color_tokens_user)[0] ?? null;;
+const fontTokens = Object.values(appquery().json._children.settings.cache.client_safe.font_tokens_user) [0] ?? null;
 
 localStorage.setItem('colorTokens', JSON.stringify(colorTokens));
 localStorage.setItem('fontTokens', JSON.stringify(fontTokens));
